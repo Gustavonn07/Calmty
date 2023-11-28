@@ -4,18 +4,30 @@ import styled from "styled-components";
 const Navbar = () => {
     
     const [linkSelecionado, setLinkSelecionado] = useState(0);
+    const [logado, setLogado] = useState(0);
     
     useEffect(() => {
         const linkGuardadoSelecionado = localStorage.getItem('linkSelecionado');
+        const estaLogado = localStorage.getItem('logado');
+
+        if(estaLogado) {
+            setLogado(parseInt(estaLogado, 10));
+        }
 
         if(linkGuardadoSelecionado) {
             setLinkSelecionado(parseInt(linkGuardadoSelecionado, 10));
         }
-    }, [])
+
+    }, []);
 
     const handleLinkSelecionado = (index) => {
         setLinkSelecionado(index);
         localStorage.setItem('linkSelecionado', index.toString());
+    }
+
+    const handleLogar = (index) => {
+        setLogado(index);
+        localStorage.setItem('logado', index.toString())
     }
 
     return (
@@ -40,6 +52,20 @@ const Navbar = () => {
                     </Navbar__li>
 
                 </Navbar__ul>
+
+                <Navbar__login>
+                    { 
+                        logado == 0 ? (
+
+                            <Navbar__btn onClick={() => handleLogar(1)}>Entrar</Navbar__btn>
+
+                        ) : (
+
+                            <Navbar__btn onClick={() => handleLogar(0)}>Sair</Navbar__btn>
+
+                        )
+                    }
+                </Navbar__login>
             </Navbar__container>
         </>
     )
@@ -63,6 +89,14 @@ const Navbar__link = styled.a`
     &.active {
         color: red;
     }
+`;
+
+const Navbar__login = styled.div`
+    
+`;
+
+const Navbar__btn = styled.button`
+    cursor: pointer;
 `;
 
 export default Navbar;
