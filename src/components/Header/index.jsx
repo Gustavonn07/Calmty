@@ -1,11 +1,11 @@
 import Slider from "../Slider";
 
-const Header = ({sliderOn}) => {
+const Header = (props) => {
 
     return (
         <>
             {
-                sliderOn && (
+                props.sliderOn && (
                     <Slider />
                 )
             }

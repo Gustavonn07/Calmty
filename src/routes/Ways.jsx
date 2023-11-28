@@ -13,13 +13,13 @@ const Ways = () => {
             <Suspense>
                 <BrowserRouter>
                     <Routes>
-                        <Route path={'/'} element={<PageLayout />}>
+                        <Route path='/' element={<PageLayout />}>
                             <Route index element={<PageHome />} />
                             <Route path="/about" element={<PageAboutUs />} />
                             <Route path="/contact" element={<PageContact />} />
                         </Route>
 
-                        <Route path={'*'} element={<PageNotFound />} />
+                        <Route path='*' element={<PageNotFound />} />
                     </Routes>
                 </BrowserRouter>
             </Suspense>

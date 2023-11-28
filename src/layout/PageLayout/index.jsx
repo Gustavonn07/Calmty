@@ -13,4 +13,4 @@ function PageLayout() {
   )
 }
 
-export default PageLayout
+export default PageLayout;
