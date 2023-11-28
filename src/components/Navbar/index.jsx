@@ -21,7 +21,7 @@ const Navbar = () => {
     return (
         <>
             <Navbar__container>
-                <Navbar__ul $linkSelecionado = {linkSelecionado}>
+                <Navbar__ul>
                     
                     <Navbar__li>
                         <Navbar__link href="/" className={linkSelecionado == 0 && 'active'} onClick={() => handleLinkSelecionado(0)}> Home </Navbar__link>
@@ -58,7 +58,8 @@ const Navbar__li = styled.li`
 `;
 
 const Navbar__link = styled.a`
-    
+    transition: all .2s;
+
     &.active {
         color: red;
     }

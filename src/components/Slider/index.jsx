@@ -59,7 +59,7 @@ const Slider__slide = styled.div`
 `
 
 const Slider__content = styled.ul`
-    
+    font-size: 5rem;
 `
 
 const Slider__dots = styled.div`
