@@ -16,6 +16,7 @@ const Navbar = () => {
     let urlCompleta = window.location.href;
     const [logado, setLogado] = useState(0);
     const [modal, setModal] = useState(false);
+    const [isRegister, setIsRegister] = useState(false);
 
     const handleOpenModal = () => {
         setModal(true);
@@ -71,9 +72,10 @@ const Navbar = () => {
                     { 
                         logado == 0 ? (
                             <>
-                                <Navbar__btn onClick={() => handleOpenModal()}>Entrar</Navbar__btn>
+                                <Navbar__btn onClick={() => {handleOpenModal(); setIsRegister(true)}}>Registrar-se</Navbar__btn>
+                                <Navbar__btn onClick={() => {handleOpenModal(); setIsRegister(false)}}>Entrar</Navbar__btn>
 
-                                { modal && <LoginModal handleCloseModal={handleCloseModal} handleLogar={handleLogar}/> }
+                                { modal && <LoginModal setIsRegister={setIsRegister} setLogado={setLogado} isRegister={isRegister} handleCloseModal={handleCloseModal} handleLogar={handleLogar}/> }
 
                                 <Navbar__text><Navbar__span>Entre</Navbar__span> ou <br /> crie seu <Navbar__span>Cadastro</Navbar__span>.</Navbar__text>
                             </>
