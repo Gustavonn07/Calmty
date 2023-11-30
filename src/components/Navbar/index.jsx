@@ -49,21 +49,24 @@ const Navbar = () => {
                 <Navbar__LOGO>Calmty</Navbar__LOGO>
 
                 <Navbar__ul>
-                    {/* trocar por esse link no final: https://calmty.vercel.app/ */}
                     <Navbar__li>
-                        <Navbar__link href="/" className={urlCompleta == 'http://localhost:5173/' && 'active'}> Home </Navbar__link>
+                        <Navbar__link href="/" className={urlCompleta == 'https://calmty.vercel.app/' && 'active'}> Home </Navbar__link>
                     </Navbar__li>
 
                     <Navbar__li>
-                        <Navbar__link href="/about" className={urlCompleta == 'http://localhost:5173/about' && 'active'}> Sobre nós </Navbar__link>
+                        <Navbar__link href="/product" className={urlCompleta == 'https://calmty.vercel.app/product' && 'active'}> Produtos </Navbar__link>
                     </Navbar__li>
 
                     <Navbar__li>
-                        <Navbar__link href="/contact" className={urlCompleta == 'http://localhost:5173/contact' && 'active'}> Contato </Navbar__link>
+                        <Navbar__link href="/about" className={urlCompleta == 'https://calmty.vercel.app/about' && 'active'}> Sobre nós </Navbar__link>
                     </Navbar__li>
 
                     <Navbar__li>
-                        <Navbar__link href="/quiz" className={urlCompleta == 'http://localhost:5173/quiz' && 'active'}> Quiz </Navbar__link>
+                        <Navbar__link href="/contact" className={urlCompleta == 'https://calmty.vercel.app/contact' && 'active'}> Contato </Navbar__link>
+                    </Navbar__li>
+
+                    <Navbar__li>
+                        <Navbar__link href="/quiz" className={urlCompleta == 'https://calmty.vercel.app/quiz' && 'active'}> Quiz </Navbar__link>
                     </Navbar__li>
 
                 </Navbar__ul>
@@ -156,7 +159,7 @@ const Navbar__link = styled.a`
             position: absolute;
             bottom: 0;
             left: 0;
-            height: .2rem;
+            height: .3rem;
             background-color: var(--color-black);
             border-radius: 10rem;
             animation: inicializar forwards .3s;
