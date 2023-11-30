@@ -1,9 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const Slider = () => {
 
     const [position, setPosition] = useState(0);
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setPosition(position => (position + 1) % 3);
+        }, 5000);
+
+        return () => clearInterval(intervalId);
+    }, [position]);
 
     return (
         <>
@@ -43,7 +51,7 @@ const Slider__container = styled.section`
     height: 85vh;
     overflow-x: hidden;
     position: relative;
-`
+`;
 const Slider__slides = styled.div`
     width: 300%;
     height: 100%;
@@ -52,7 +60,7 @@ const Slider__slides = styled.div`
     top: 0;
     left: calc(-100% * ${props => props.$position || 0});
     transition: all 500ms ease;
-`
+`;
 
 const Slider__slide = styled.div`
     width: 100%;
@@ -77,11 +85,11 @@ const Slider__slide = styled.div`
         background-position: 0 50%;
         filter: brightness(50%);
     }
-`
+`;
 
 const Slider__content = styled.ul`
     font-size: 5rem;
-`
+`;
 
 const Slider__dots = styled.div`
     position: absolute;

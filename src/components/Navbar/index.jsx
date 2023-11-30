@@ -108,6 +108,7 @@ const Navbar__container = styled.nav`
 const Navbar__LOGO = styled.h2`
     font-size: 3.5rem;
     color: var(--color-white);
+    font-weight: 800;
 `
 
 const Navbar__ul = styled.ul`
@@ -191,14 +192,29 @@ const Navbar__span = styled.span`
 `;
 
 const Navbar__img = styled.img`
-    
+
 `;
 
 const Navbar__btn = styled.button`
     cursor: pointer;
+    background-color: var(--color-white);
+    font-size: 1.6rem;
     height: 3.8rem;
     border-radius: .4rem;
     padding: 0 1rem;
+    transition: all .2s;
+    box-shadow: 0 .4rem .8rem var(--shadow-20);
+
+    &:hover,
+    &:focus {
+        transform: translateY(-1px) scale(1.02);
+        box-shadow: 0 .4rem 1rem var(--shadow-60);
+    }
+
+    &:active {
+        box-shadow: 0 .4rem .8rem var(--shadow-40);
+        transform: translateY(-.5px) scale(1.01);
+    }
 `;
 
 export default Navbar;
