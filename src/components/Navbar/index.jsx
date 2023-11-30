@@ -102,9 +102,9 @@ const Navbar__container = styled.nav`
     gap: 8rem;
     align-items: center;
     padding: 0 2rem;
-    background-color: var(--color-primary-1);
+    background-color: #90b48f85;
     box-shadow: 0 .8rem 1rem var(--shadow-20);
-    position: relative;
+    position: fixed;
     z-index: 10;
 `;
 
