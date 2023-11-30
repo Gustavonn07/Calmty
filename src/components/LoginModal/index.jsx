@@ -172,7 +172,7 @@ const Modal = styled.section`
 `;
 
 const Modal__container = styled.div`
-    width: 70%;
+    width: 65%;
     height: 90%;
     display: flex;
     position: relative;
