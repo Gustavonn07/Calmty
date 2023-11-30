@@ -49,7 +49,7 @@ const Navbar = () => {
                 <Navbar__LOGO>Calmty</Navbar__LOGO>
 
                 <Navbar__ul>
-
+                    {/* trocar por esse link no final: https://calmty.vercel.app/ */}
                     <Navbar__li>
                         <Navbar__link href="/" className={urlCompleta == 'http://localhost:5173/' && 'active'}> Home </Navbar__link>
                     </Navbar__li>
@@ -72,7 +72,7 @@ const Navbar = () => {
                     { 
                         logado == 0 ? (
                             <>
-                                <Navbar__btn onClick={() => {handleOpenModal(); setIsRegister(true)}}>Registrar-se</Navbar__btn>
+                                <Navbar__btn onClick={() => {handleOpenModal(); setIsRegister(true)}}>Cadastrar</Navbar__btn>
                                 <Navbar__btn onClick={() => {handleOpenModal(); setIsRegister(false)}}>Entrar</Navbar__btn>
 
                                 { modal && <LoginModal setIsRegister={setIsRegister} setLogado={setLogado} isRegister={isRegister} handleCloseModal={handleCloseModal} handleLogar={handleLogar}/> }
@@ -101,7 +101,7 @@ const Navbar__container = styled.nav`
     padding: 0 2rem;
     background-color: var(--color-primary-1);
     box-shadow: 0 .8rem 1rem var(--shadow-20);
-    position: absolute;
+    position: relative;
     z-index: 10;
 `;
 

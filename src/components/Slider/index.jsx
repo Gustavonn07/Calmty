@@ -9,19 +9,19 @@ const Slider = () => {
         <>
             <Slider__container>
                 <Slider__slides $position={position}>
-                    <Slider__slide>
+                    <Slider__slide id="slide01">
                         <Slider__content>
                             
                         </Slider__content>
                     </Slider__slide>
 
-                    <Slider__slide>
+                    <Slider__slide id="slide02">
                         <Slider__content>
 
                         </Slider__content>
                     </Slider__slide>
 
-                    <Slider__slide>
+                    <Slider__slide id="slide03">
                         <Slider__content>
 
                         </Slider__content>
@@ -40,13 +40,13 @@ const Slider = () => {
 
 const Slider__container = styled.section`
     width: 100%;
-    height: 92vh;
-    background-color: var(--color-secondary-2);
-    overflow: hidden;
+    height: 85vh;
+    overflow-x: hidden;
     position: relative;
 `
 const Slider__slides = styled.div`
     width: 300%;
+    height: 100%;
     display: flex;
     position: absolute;
     top: 0;
@@ -56,6 +56,27 @@ const Slider__slides = styled.div`
 
 const Slider__slide = styled.div`
     width: 100%;
+    height: 100%;
+
+    &#slide01 {
+        background-image: url(../../images/honeyTea.jpg);
+        background-size: cover;
+        background-position: 0 25%;
+    }
+
+    &#slide02 {
+        background-image: url(../../images/lemonTea.jpg);
+        background-size: cover;
+        background-position: 0 70%;
+        filter: brightness(90%);
+    }
+
+    &#slide03 {
+        background-image: url(../../images/orientalTea.jpg);
+        background-size: cover;
+        background-position: 0 50%;
+        filter: brightness(50%);
+    }
 `
 
 const Slider__content = styled.ul`
@@ -77,6 +98,7 @@ const Slider__dot = styled.div`
     background-color: var(--color-white);
     border-radius: 100%;
     transition: all .28s;
+    cursor: pointer;
 
     &.active {
         background-color: var(--color-primary-2);

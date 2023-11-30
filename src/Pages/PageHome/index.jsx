@@ -5,7 +5,6 @@ function PageHome() {
   return (
     <>
         <Header sliderOn={true} />
-        HOME
     </>
   )
 }
