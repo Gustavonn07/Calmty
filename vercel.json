@@ -1,36 +1,5 @@
 {
-  "version": 2,
-  "builds": [
-    { "src": "public/**", "use": "@vercel/static" },
-    { "src": "api/**", "use": "@vercel/node" }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ],
-  "env": {
-    "EXAMPLE_ENV_VAR": "example-value"
-  },
-  "scripts": {
-    "postinstall": "npm run build",
-    "build": "npm run build:frontend && npm run build:backend",
-    "build:frontend": "npm run build:vite",
-    "build:backend": "npm run build:json-server",
-    "build:vite": "vite build",
-    "build:json-server": "npx json-server db.json --watch --port 3000",
-    "dev": "npm run dev:vite && npm run dev:json-server",
-    "dev:vite": "vite",
-    "dev:json-server": "npx json-server db.json --watch --port 3000",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
-  },
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/$1" }
-  ]
+    "rewrites":  [
+      {"source": "/(.*)", "destination": "/"}
+    ]
 }
