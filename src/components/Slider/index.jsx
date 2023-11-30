@@ -57,7 +57,7 @@ const Slider = () => {
 
 const Slider__container = styled.section`
     width: 100%;
-    height: 85vh;
+    height: 95vh;
     overflow-x: hidden;
     position: relative;
 `;
