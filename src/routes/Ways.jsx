@@ -6,6 +6,7 @@ import PageNotFound from "../Pages/PageNotFound";
 import PageAboutUs from "../Pages/PageAboutUs";
 import PageContact from "../Pages/PageContact";
 import PageQuiz from "../Pages/PageQuiz";
+import PageProduct from "../Pages/PageProduct";
 
 const Ways = () => {
 
@@ -16,6 +17,7 @@ const Ways = () => {
                     <Routes>
                         <Route path='/' element={<PageLayout />}>
                             <Route index element={<PageHome />} />
+                            <Route path="/product" element={<PageProduct />} />
                             <Route path="/about" element={<PageAboutUs />} />
                             <Route path="/contact" element={<PageContact />} />
                             <Route path="/quiz" element={<PageQuiz />} />
