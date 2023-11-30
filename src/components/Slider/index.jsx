@@ -40,8 +40,8 @@ const Slider = () => {
 
 const Slider__container = styled.section`
     width: 100%;
-    height: 85vh;
-    background-color: red;
+    height: 92vh;
+    background-color: var(--color-secondary-2);
     overflow: hidden;
     position: relative;
 `
@@ -64,7 +64,7 @@ const Slider__content = styled.ul`
 
 const Slider__dots = styled.div`
     position: absolute;
-    bottom: 5.3rem;
+    bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -74,12 +74,12 @@ const Slider__dots = styled.div`
 const Slider__dot = styled.div`
     width: 1.2rem;
     height: 1.2rem;
-    background-color: #ffe6e6;
+    background-color: var(--color-white);
     border-radius: 100%;
-    transition: all .3s;
+    transition: all .28s;
 
     &.active {
-        background-color: #C92071;
+        background-color: var(--color-primary-2);
     }
 `;
 
