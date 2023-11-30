@@ -49,7 +49,7 @@ const Navbar = () => {
                 <Navbar__LOGO>Calmty</Navbar__LOGO>
 
                 <Navbar__ul>
-
+                    {/* trocar por esse link no final: https://calmty.vercel.app/ */}
                     <Navbar__li>
                         <Navbar__link href="/" className={urlCompleta == 'http://localhost:5173/' && 'active'}> Home </Navbar__link>
                     </Navbar__li>
@@ -72,7 +72,7 @@ const Navbar = () => {
                     { 
                         logado == 0 ? (
                             <>
-                                <Navbar__btn onClick={() => {handleOpenModal(); setIsRegister(true)}}>Registrar-se</Navbar__btn>
+                                <Navbar__btn onClick={() => {handleOpenModal(); setIsRegister(true)}}>Cadastrar</Navbar__btn>
                                 <Navbar__btn onClick={() => {handleOpenModal(); setIsRegister(false)}}>Entrar</Navbar__btn>
 
                                 { modal && <LoginModal setIsRegister={setIsRegister} setLogado={setLogado} isRegister={isRegister} handleCloseModal={handleCloseModal} handleLogar={handleLogar}/> }
@@ -101,13 +101,14 @@ const Navbar__container = styled.nav`
     padding: 0 2rem;
     background-color: var(--color-primary-1);
     box-shadow: 0 .8rem 1rem var(--shadow-20);
-    position: absolute;
+    position: relative;
     z-index: 10;
 `;
 
 const Navbar__LOGO = styled.h2`
     font-size: 3.5rem;
     color: var(--color-white);
+    font-weight: 800;
 `
 
 const Navbar__ul = styled.ul`
@@ -191,14 +192,29 @@ const Navbar__span = styled.span`
 `;
 
 const Navbar__img = styled.img`
-    
+
 `;
 
 const Navbar__btn = styled.button`
     cursor: pointer;
+    background-color: var(--color-white);
+    font-size: 1.6rem;
     height: 3.8rem;
     border-radius: .4rem;
     padding: 0 1rem;
+    transition: all .2s;
+    box-shadow: 0 .4rem .8rem var(--shadow-20);
+
+    &:hover,
+    &:focus {
+        transform: translateY(-1px) scale(1.02);
+        box-shadow: 0 .4rem 1rem var(--shadow-60);
+    }
+
+    &:active {
+        box-shadow: 0 .4rem .8rem var(--shadow-40);
+        transform: translateY(-.5px) scale(1.01);
+    }
 `;
 
 export default Navbar;
