@@ -2,11 +2,30 @@
     "records": [
         {
             "id": "1",
-            "record": "a",
-            "imagem": "",
-            "texto": "b"
+            "record": "Maior Variedade",
+            "imagem": "variedade",
+            "texto": "Explore um mundo de sabores inigualáveis com nossa incrível coleção de chás exclusivos. Com mais de 40 blends inovadores e chás raros de regiões remotas."
+        },
+        {
+            "id": "2",
+            "record": "Chá Mais Saboroso",
+            "imagem": "sabor",
+            "texto": " Delicie-se com o prazer de uma xícara perfeita a cada gole! O nosso recorde mundial está na produção do chá mais saboroso do mundo, cultivado cuidadosamente e colhido no auge da maturidade."
+        },
+        {
+            "id": "3",
+            "record": "Eco-friendly",
+            "imagem": "eco",
+            "texto": "Preocupamo-nos não apenas com o sabor, mas também com o planeta! Possuímos o recorde da embalagem eco-friendly mais inovadora do mercado, com mais de 2 toneladas de plástico eliminadas."
+        },
+        {
+            "id": "4",
+            "record": "Entrega Rápida",
+            "imagem": "entrega",
+            "texto": "Aprecie seu chá favorito sem esperar! Com o recorde de entrega mais rápida e eficiente, garantimos que seu pedido chegue à sua porta em tempo recorde."
         }
     ],
+
     "depoimentos": [
         {
             "id": "",
@@ -17,6 +36,7 @@
             "depoimento": ""
         }
     ],
+
     "servicos": [
         {
             "id": "",
@@ -25,6 +45,7 @@
             "texto": ""
         }
     ],
+    
     "sedes": [
         {
             "id": "",

@@ -30,7 +30,7 @@ const Slider = () => {
                         <Slider__content className="right">
                             <Slider__heading>Coleção EXCLUSIVA: <br /> <Slider__span className="limao">Manhã de limão</Slider__span></Slider__heading>
                             <Slider__paragraph>
-                                Embarque em uma jornada sensorial única, onde o frescor vibrante do limão se encontra com a serenidade aromática do chá. Esta coleção temática é um convite para explorar a fusão única entre o cítrico revigorante do limão e a profundidade calmante do chá. 
+                                Embarque em uma jornada sensorial única, onde o frescor cítrico e vibrante do limão se encontra com a serenidade aromática do chá. 
                             </Slider__paragraph>
                         </Slider__content>
                     </Slider__slide>

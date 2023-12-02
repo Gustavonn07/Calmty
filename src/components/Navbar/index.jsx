@@ -104,7 +104,7 @@ const Navbar__container = styled.nav`
     padding: 0 2rem;
     background-color: #90b48f85;
     box-shadow: 0 .8rem 1rem var(--shadow-20);
-    position: fixed;
+    position: absolute;
     z-index: 10;
 `;
 
