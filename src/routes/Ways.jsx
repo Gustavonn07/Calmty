@@ -1,13 +1,12 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Suspense, lazy } from "react";
-
-const PageLayout = lazy(() => import("../layout/PageLayout"));
-const PageHome = lazy(() => import("../pages/PageHome"));
-const PageNotFound = lazy(() => import("../pages/PageNotFound"));
-const PageAboutUs = lazy(() => import("../pages/PageAboutUs"));
-const PageContact = lazy(() => import("../pages/PageContact"));
-const PageQuiz = lazy(() => import("../pages/PageQuiz"));
-const PageProduct = lazy(() => import("../pages/PageProduct"));
+import {BrowserRouter, Routes, Route } from "react-router-dom";
+import { Suspense } from "react";
+import PageLayout from "../layout/PageLayout";
+import PageHome from "../pages/PageHome";
+import PageNotFound from "../pages/PageNotFound";
+import PageAboutUs from "../pages/PageAboutUs";
+import PageContact from "../pages/PageContact";
+import PageQuiz from "../pages/PageQuiz";
+import PageProduct from "../pages/PageProduct";
 
 const Ways = () => {
 
