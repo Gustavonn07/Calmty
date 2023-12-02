@@ -1,12 +1,12 @@
 import {BrowserRouter, Routes, Route } from "react-router-dom";
 import { Suspense } from "react";
 import PageLayout from "../layout/PageLayout";
-import PageHome from "../Pages/PageHome";
-import PageNotFound from "../Pages/PageNotFound";
-import PageAboutUs from "../Pages/PageAboutUs";
-import PageContact from "../Pages/PageContact";
-import PageQuiz from "../Pages/PageQuiz";
-import PageProduct from "../Pages/PageProduct";
+import PageHome from "../pages/PageHome";
+import PageNotFound from "../pages/PageNotFound";
+import PageAboutUs from "../pages/PageAboutUs";
+import PageContact from "../pages/PageContact";
+import PageQuiz from "../pages/PageQuiz";
+import PageProduct from "../pages/PageProduct";
 
 const Ways = () => {
 
