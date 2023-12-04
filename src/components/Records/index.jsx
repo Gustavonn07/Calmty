@@ -26,12 +26,14 @@ const Records = () => {
     return (
         <>
             <Records__container>
-                <Badge>
-                    <span className="text-center absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl">Aprovado <br /> 100%</span>
-                </Badge>
-                <Records__heading__primary>Nossos Prestígios</Records__heading__primary>
+                <Records__texts data-aos="fade-up" data-aos-duration="1200">
+                    <Badge>
+                        <span className="text-center absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl">Aprovado <br /> 100%</span>
+                    </Badge>
+                    <Records__heading__primary>Nossos Prestígios</Records__heading__primary>
+                </Records__texts>
 
-                    <Records__box data-aos="fade-up" data-aos-duration="1200">
+                    <Records__box data-aos="fade-up" data-aos-duration="1600">
                         {
                             records.map(record => (
                                 <Records__record key={record.id}>
@@ -68,6 +70,12 @@ const Records__container = styled.section`
     position: relative;
     overflow: hidden;
 `;
+
+const Records__texts = styled.div`
+    display: flex;
+    width: 100%;
+    margin: 5rem 0;
+`
 
 const Records__box = styled.div`
     width: 100%;
@@ -118,27 +126,28 @@ const Records__icon = styled.div`
 `;
 
 const Records__heading__primary = styled.h2`
-    font-size: var(--font-heading-2);
-    margin-top: 8rem;
+    font-size: var(--font-heading-1);
     color: var(--color-primary-3);
     font-weight: 700;
     position: relative;
+    left: 50%;
+    transform: scale(1) skewY(0) translateX(-50%);
     transition: all .2s;
     text-shadow: 0 .2rem .6rem var(--shadow-20);
 
     &:hover {
-        transform: scale(1.02) skewY(1deg);
+        transform: scale(1.02) skewY(1deg) translateX(-50%);
         text-shadow: 0 .2rem .6rem var(--shadow-40);
     }
 
     &::before {
         content: "";
         width: 0;
-        height: .5rem;
+        height: .8rem;
         background-color: var(--color-primary-3);
         border-radius: .8rem;
         position: absolute;
-        top: 6.5rem;
+        top: 90%;
         left: -2rem;
         transition: all .5s;
     }
@@ -177,8 +186,7 @@ const Badge = styled.div`
     height: var(--size);
     width: var(--size);
     border-radius: 5rem;
-    top: 10%;
-    left: 8%;
+    left: 10%;
     color: var(--color-white);
     box-shadow:  0 3rem 8rem var(--color-primary-0);
     transition: all .2s;
