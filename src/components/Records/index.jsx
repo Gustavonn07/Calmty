@@ -28,7 +28,7 @@ const Records = () => {
             <Records__container>
                 <Records__texts data-aos="fade-up" data-aos-duration="1200">
                     <Badge>
-                        <span className="text-center absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl">Aprovado <br /> 100%</span>
+                        <span>Aprovado <br /> 100%</span>
                     </Badge>
                     <Records__heading__primary>Nossos Prestígios</Records__heading__primary>
                 </Records__texts>
@@ -180,7 +180,6 @@ const Records__paragraph = styled.p`
 
 const Badge = styled.div`
     --size: 10rem;
-
     position: absolute;
     background: var(--color-primary-2);
     height: var(--size);
@@ -191,6 +190,16 @@ const Badge = styled.div`
     box-shadow:  0 3rem 8rem var(--color-primary-0);
     transition: all .2s;
     transform: scale(1) translateY(0px) rotate(-3deg);
+
+    & span {
+        position: absolute;
+        text-align: center;
+        z-index: 20;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.8rem;
+    }
 
     &:hover {
         transform: scale(1.1) translateY(-1px) rotate(-10deg);
