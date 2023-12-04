@@ -11,12 +11,17 @@ const Records = () => {
 
     const [records, setRecords] = useState([]);
 
-    useEffect(() => {
+    try {
+        useEffect(() => {
         axios.get('http://localhost:3000/records')
             .then(response => setRecords(response.data))
             .catch(err => console.log(`Erro encontrado: ${err}`))
-    }, []);
-
+            
+        }, []);
+        
+    } catch(e) {
+        console.log(e);
+    }
 
     return (
         <>
