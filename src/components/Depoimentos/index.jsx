@@ -30,17 +30,19 @@ const Depoimentos = () => {
                     {
                         depoimentos.map((depoimento, index) => ( 
 
-                            <Depoimentos__depoimento className={index % 2 === 0 ? 'right' : 'left'} key={depoimento.id}>
-                                <Depoimentos__box>
-                                    <Depoimentos__img src={depoimento.imagem} alt={depoimento.nome}/>
-                                    <Depoimentos__data>{depoimento.data}</Depoimentos__data>
-                                </Depoimentos__box>
-
-                                <Depoimentos__box>
-                                    <Depoimentos__heading__secondary>{depoimento.nome}</Depoimentos__heading__secondary>
-                                    <Depoimentos__paragraph__depoimento>{depoimento.depoimento}</Depoimentos__paragraph__depoimento>
-                                </Depoimentos__box>
-                            </Depoimentos__depoimento>
+                            <div data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'} data-aos-duration="1600"  key={depoimento.id}>
+                                <Depoimentos__depoimento className={index % 2 === 0 ? 'right' : 'left'}>
+                                    <Depoimentos__box>
+                                        <Depoimentos__img src={depoimento.imagem} alt={depoimento.nome}/>
+                                        <Depoimentos__data>{depoimento.data}</Depoimentos__data>
+                                    </Depoimentos__box>
+                                    <Depoimentos__box>
+                                        <Depoimentos__heading__secondary>{depoimento.nome}</Depoimentos__heading__secondary>
+                                        <Depoimentos__heading__tertiary>{depoimento.titulo}</Depoimentos__heading__tertiary>
+                                        <Depoimentos__paragraph__depoimento>{depoimento.depoimento}</Depoimentos__paragraph__depoimento>
+                                    </Depoimentos__box>
+                                </Depoimentos__depoimento>
+                            </div>
                         ))
                     }
                 </Depoimentos__depoimentos>
@@ -104,37 +106,79 @@ const Depoimentos__depoimentos = styled.ul`
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 15rem;
+    margin-top: 10rem;
+    gap: 3rem;
+    padding-bottom: 12.5rem;
 `;
 
 const Depoimentos__depoimento = styled.li`
     display: flex;
+    gap: clamp(1rem, 2rem, 2.5rem);
+    background-color: var(--color-secondary-2);
+    padding: 1.5rem;
+    width: calc(clamp(60rem, 80rem, 90rem) + clamp(1rem, 2rem, 2.5rem));
+    border-radius: 1.5rem;
+    box-shadow: 0 .6rem 1rem var(--shadow-40);
+    transition: all .2s;
 
     &.left {
         flex-direction: row-reverse;
+        transform: translateX(5rem);
+    }
+
+    &.right {
+        transform: translateX(-5rem);
+    }
+
+    &:hover {
+        box-shadow: 0 .6rem 1rem var(--shadow-60);
+
+        &.left {
+            transform: translate(5rem, -.5rem) scale(1.02) rotate(-1deg);
+        }
+
+        &.right {
+            transform: translate(-5rem, -.5rem) scale(1.02) rotate(1deg);
+        }
     }
 `;
 
 const Depoimentos__box = styled.div`
-    
+    display: flex;
+    flex-direction: column;
 `;
 
 const Depoimentos__img = styled.img`
     width: clamp(10rem, 16rem, 22rem);
     height: clamp(10rem, 16rem, 22rem);
     border-radius: 100%;
+    box-shadow: 0 .6rem 1rem var(--shadow-20);
 `;
 
 const Depoimentos__data = styled.p`
-    
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--color-primary-3);
+    font-weight: 700;
+    margin-top: .5rem;
 `;
 
 const Depoimentos__heading__secondary = styled.h3`
     font-size: var(--font-heading-3);
+    color: var(--color-primary-3);
+`;
+
+
+const Depoimentos__heading__tertiary = styled.h4`
+    font-size: var(--font-heading-4);
+    color: var(--color-primary-3);
+    font-style: italic;
 `;
 
 const Depoimentos__paragraph__depoimento = styled.p`
-    
+    font-size: 1.8rem;
+    color: var(--color-white);
+    margin: auto 0;
 `;
 
 export default Depoimentos;
