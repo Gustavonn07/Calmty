@@ -13,7 +13,7 @@ const Records = () => {
 
     try {
         useEffect(() => {
-        axios.get('http://localhost:3000/records')
+        axios.get('https://calmty-vercel-json.vercel.app/records')
             .then(response => setRecords(response.data))
             .catch(err => console.log(`Erro encontrado: ${err}`))
             
