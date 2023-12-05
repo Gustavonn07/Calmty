@@ -8,7 +8,7 @@ const Depoimentos = () => {
 
     try {
         useEffect(() => {
-        axios.get('http://localhost:3000/depoimentos')
+        axios.get('https://calmty-vercel-json.vercel.app/depoimentos')
             .then(response => setDepoimentos(response.data))
             .catch(err => console.log(`Erro encontrado: ${err}`))
             
@@ -45,7 +45,6 @@ const Depoimentos = () => {
                     }
                 </Depoimentos__depoimentos>
             </Depoimentos__container>
-        
         </>
     )
 }
