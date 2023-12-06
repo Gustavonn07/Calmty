@@ -96,26 +96,48 @@ const Slider__slide = styled.div`
 `;
 
 const Slider__content = styled.ul`
-    width: 50%;
+    width: 40%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 4rem;
+    padding-left: 5rem;
+    gap: 2rem;
+
+    @media only screen and (max-width: 800px) {
+        width: 60%;
+    }
+    
+    @media only screen and (max-width: 600px) {
+        width: 100%;
+    }
+    
+    @media only screen and (max-width: 600px) {
+        padding: 0 3rem;
+        align-items: center;
+        text-align: center;
+    }
 
     &.left {
-        background-image: linear-gradient(to right, #00000070 70%, #00000000 100%);
+        background-image: linear-gradient(to right, #00000070 80%, #00000000 100%);
+
+        @media only screen and (max-width: 600px) {
+            background-image: linear-gradient(to left, #00000070 100%, #00000070 100%);
+        }
     }
 
     &.right {
-        background-image: linear-gradient(to left, #00000070 35%, #00000000 50%);
-        width: 100%;
-        align-items: end;
-        padding-right: 10rem;
-
-        & p {
-            width: 35%;
+        background-image: linear-gradient(to left, #00000070 80%, #00000000 100%);
+        margin-left: auto;
+        
+        text-align: end;
+        padding-left: 0rem;
+        padding-right: 5rem;
+        
+        @media only screen and (max-width: 600px) {
+            background-image: linear-gradient(to left, #00000070 100%, #00000070 100%);
+            text-align: center;
+            padding: 0 3rem;
         }
     }
 
@@ -125,18 +147,29 @@ const Slider__heading = styled.h2`
     font-size: 5rem;
     color: var(--color-white);
     font-weight: 600;
+
+    @media only screen and (max-width: 1200px) {
+        font-size: 4rem;
+    }
 `;
 
 const Slider__paragraph = styled.p`
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--color-white);
-    width: 70%;
+    
+    @media only screen and (max-width: 1200px) {
+        font-size: 2rem;
+    }
 `;
 
 const Slider__span = styled.span`
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 6rem;
     font-weight: bold;
+    
+    @media only screen and (max-width: 1200px) {
+        font-size: 5rem;
+    }
     
     &.mel {
         color: #f3a334;

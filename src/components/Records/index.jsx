@@ -4,8 +4,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import { GiEcology } from "react-icons/gi";
 import { FaShippingFast } from "react-icons/fa";
-import { BiHappyHeartEyes } from "react-icons/bi";
-import { BiSelectMultiple } from "react-icons/bi";
+import { BiHappyHeartEyes, BiSelectMultiple } from "react-icons/bi";
 
 const Records = () => {
 
@@ -69,6 +68,10 @@ const Records__container = styled.section`
     gap: 10rem;
     position: relative;
     overflow: hidden;
+
+    @media only screen and (max-width: 800px) {
+        gap: 6rem;
+    }
 `;
 
 const Records__texts = styled.div`
@@ -103,6 +106,15 @@ const Records__record = styled.div`
     box-shadow: 0 .6rem 1rem var(--shadow-60);
     transition: all .2s;
 
+    @media only screen and (max-width: 1000px) {
+        width: calc(50% - 12rem);
+    }
+    
+    @media only screen and (max-width: 800px) {
+        width: 70%;
+        height: 40rem;
+    }
+
     &:hover {
         box-shadow: 0 .6rem 1rem var(--shadow-80);
         transform: translateY(-1rem) scale(1.05) rotate(1deg);
@@ -123,6 +135,14 @@ const Records__icon = styled.div`
     position: absolute;
     top: 30%;
     transition: all .2s;
+
+    @media only screen and (max-width: 1200px) {
+        font-size: 6rem;
+    }
+
+    @media only screen and (max-width: 1000px) {
+        font-size: 8rem;
+    }
 `;
 
 const Records__heading__primary = styled.h2`
@@ -134,6 +154,10 @@ const Records__heading__primary = styled.h2`
     transform: scale(1) skewY(0) translateX(-50%);
     transition: all .2s;
     text-shadow: 0 .2rem .6rem var(--shadow-20);
+    
+    @media only screen and (max-width: 1200px) {
+        font-size: var(--font-heading-2);
+    }
 
     &:hover {
         transform: scale(1.02) skewY(1deg) translateX(-50%);
@@ -166,6 +190,14 @@ const Records__heading__secundary = styled.h3`
     position: absolute;
     top: 10%;
     transition: all .2s;
+
+    @media only screen and (max-width: 1200px) {
+        font-size: var(--font-heading-4);
+    }
+
+    @media only screen and (max-width: 1000px) {
+        font-size: var(--font-heading-3);
+    }
 `;
 
 const Records__paragraph = styled.p`
@@ -176,6 +208,20 @@ const Records__paragraph = styled.p`
     top: 60%;
     text-align: center;
     padding: 0 1rem;
+
+    @media only screen and (max-width: 1200px) {
+        font-size: 1.2rem;
+    }
+
+    @media only screen and (max-width: 1000px) {
+        font-size: 1.4rem;
+        padding: 0 1.5rem;
+    }
+    
+    @media only screen and (max-width: 800px) {
+        font-size: 1.6rem;
+        padding: 0 4rem;
+    }
 `;
 
 const Badge = styled.div`
@@ -190,6 +236,10 @@ const Badge = styled.div`
     box-shadow:  0 3rem 8rem var(--color-primary-0);
     transition: all .2s;
     transform: scale(1) translateY(0px) rotate(-3deg);
+    
+    @media only screen and (max-width: 800px) {
+        display: none;
+    }
 
     & span {
         position: absolute;

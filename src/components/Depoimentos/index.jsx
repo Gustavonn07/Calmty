@@ -77,6 +77,10 @@ const Depoimentos__heading__primary = styled.h2`
     transition: all .2s;
     text-shadow: 0 .2rem .6rem var(--shadow-20);
 
+    @media only screen and (max-width: 1200px) {
+        font-size: var(--font-heading-2);
+    }
+
     &:hover {
         transform: scale(1.02) skewY(1deg) translateX(-50%);
         text-shadow: 0 .2rem .6rem var(--shadow-40);
@@ -116,10 +120,18 @@ const Depoimentos__depoimento = styled.li`
     gap: clamp(1rem, 2rem, 2.5rem);
     background-color: var(--color-secondary-2);
     padding: 1.5rem;
-    width: calc(clamp(60rem, 80rem, 90rem) + clamp(1rem, 2rem, 2.5rem));
+    width: calc(clamp(40rem, 80rem, 90rem) + clamp(1rem, 2rem, 2.5rem));
     border-radius: 1.5rem;
     box-shadow: 0 .6rem 1rem var(--shadow-40);
     transition: all .2s;
+
+    @media only screen and (max-width: 1200px) {
+        width: 70rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        width: 50rem;
+    }
 
     &.left {
         flex-direction: row-reverse;
@@ -146,6 +158,10 @@ const Depoimentos__depoimento = styled.li`
 const Depoimentos__box = styled.div`
     display: flex;
     flex-direction: column;
+
+    @media only screen and (max-width: 800px) {
+        justify-content: center;
+    }
 `;
 
 const Depoimentos__img = styled.img`
@@ -153,6 +169,11 @@ const Depoimentos__img = styled.img`
     height: clamp(10rem, 16rem, 22rem);
     border-radius: 100%;
     box-shadow: 0 .6rem 1rem var(--shadow-20);
+    
+    @media only screen and (max-width: 800px) {
+        width: 10rem;
+        height: 10rem;
+    }
 `;
 
 const Depoimentos__data = styled.p`
@@ -166,6 +187,10 @@ const Depoimentos__data = styled.p`
 const Depoimentos__heading__secondary = styled.h3`
     font-size: var(--font-heading-3);
     color: var(--color-primary-3);
+
+    @media only screen and (max-width: 800px) {
+        font-size: var(--font-heading-4);
+    }
 `;
 
 
@@ -173,12 +198,20 @@ const Depoimentos__heading__tertiary = styled.h4`
     font-size: var(--font-heading-4);
     color: var(--color-primary-3);
     font-style: italic;
+
+    @media only screen and (max-width: 800px) {
+        font-size: var(--font-heading-5);
+    }
 `;
 
 const Depoimentos__paragraph__depoimento = styled.p`
     font-size: 1.8rem;
     color: var(--color-white);
     margin: auto 0;
+    
+    @media only screen and (max-width: 800px) {
+        font-size: 1.3rem;
+    }
 `;
 
 export default Depoimentos;
