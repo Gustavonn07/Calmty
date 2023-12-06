@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
+import MenuModal from "../MenuModal";
 
 const Hamburguer = () => {
 
@@ -7,15 +8,16 @@ const Hamburguer = () => {
 
     const handleOpen = () => {
         setOpen(true);
+        document.body.classList.add('modal-open');
     }
 
     return (
         <>
-            <RxHamburgerMenu color="white" size={26} onClick={() => handleOpen()}/>
+            <RxHamburgerMenu color="white" size={26} open={open} setOpen={setOpen} onClick={() => handleOpen()}/>
 
             {
                 open && (
-                    
+                    <MenuModal setOpen={setOpen} />
                 )
             }
         </>
