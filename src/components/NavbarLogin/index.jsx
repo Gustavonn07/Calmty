@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import LoginModal from "../LoginModal";
 
-const NavbarLogin = () => {
+const NavbarLogin = (props) => {
 
     useEffect(() => {
         const estaLogado = localStorage.getItem('logado');
@@ -44,7 +45,7 @@ const NavbarLogin = () => {
 
     return (
         <>
-            <Navbar__login>
+            <Navbar__login className={props.classe == 'hamburguer' ? 'hamburguer' : ''}>
                 {
                     logado == 0 ? (
                         <>
@@ -72,6 +73,19 @@ const Navbar__login = styled.div`
     align-items: center;
     gap: 1.8rem;
     margin-left: auto;
+
+    &.hamburguer {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        & button {
+            width: 10rem;
+            height: 3.6rem;
+            font-size: 1.6rem;
+        }
+    }
 `;
 
 const Navbar__text = styled.p`
