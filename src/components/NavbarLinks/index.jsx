@@ -1,26 +1,48 @@
 /* eslint-disable react/prop-types */
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const NavbarLinks = (props) => {
 
     let urlCompleta = window.location.href;
 
+    const [classe, setClasse] = useState(false)
+
+    useEffect(() => {
+        const handleResize = () => {
+
+            if (window.innerWidth <= 600) {
+                setClasse(false);
+
+            } else {
+                setClasse(true);
+            }
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     return (
         <Navbar__ul className={props.classe == 'hamburguer' ? 'coluna' : ''}>
             <Navbar__li>
-                <Navbar__link href="/" className={urlCompleta == 'https://calmty.vercel.app/' && 'active'}> Home </Navbar__link>
+                <Navbar__link href="/" className={urlCompleta == 'https://calmty.vercel.app/' && classe ? 'active' : ''}> Home </Navbar__link>
             </Navbar__li>
             <Navbar__li>
-                <Navbar__link href="/product" className={urlCompleta == 'https://calmty.vercel.app/product' && 'active'}> Produtos </Navbar__link>
+                <Navbar__link href="/product" className={urlCompleta == 'https://calmty.vercel.app/product' && classe ? 'active' : ''}> Produtos </Navbar__link>
             </Navbar__li>
             <Navbar__li>
-                <Navbar__link href="/about" className={urlCompleta == 'https://calmty.vercel.app/about' && 'active'}> Sobre nós </Navbar__link>
+                <Navbar__link href="/about" className={urlCompleta == 'https://calmty.vercel.app/about' && classe ? 'active' : ''}> Sobre nós </Navbar__link>
             </Navbar__li>
             <Navbar__li>
-                <Navbar__link href="/contact" className={urlCompleta == 'https://calmty.vercel.app/contact' && 'active'}> Contato </Navbar__link>
+                <Navbar__link href="/contact" className={urlCompleta == 'https://calmty.vercel.app/contact' && classe ? 'active' : ''}> Contato </Navbar__link>
             </Navbar__li>
             <Navbar__li>
-                <Navbar__link href="/quiz" className={urlCompleta == 'https://calmty.vercel.app/quiz' && 'active'}> Quiz </Navbar__link>
+                <Navbar__link href="/quiz" className={urlCompleta == 'https://calmty.vercel.app/quiz' && classe ? 'active' : ''}> Quiz </Navbar__link>
             </Navbar__li>
         </Navbar__ul>
     )
