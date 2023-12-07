@@ -204,6 +204,7 @@ const Modal__container = styled.div`
     @media only screen and (max-width: 600px) {
         height: 100%;
         flex-direction: column;
+        padding-top: 5rem;
     }
 
     @keyframes open {
@@ -239,6 +240,11 @@ const Modal__close = styled.button`
     background-color: transparent;
     font-size: 2rem;
     cursor: pointer;
+
+    @media only screen and (max-width: 600px) {
+        top: 6%;
+        right: 5%;
+    }
 `;
 
 const Modal__image = styled.img`
