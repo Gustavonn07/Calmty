@@ -117,6 +117,10 @@ const Slider__content = styled.ul`
         align-items: center;
         text-align: center;
     }
+    
+    @media only screen and (max-width: 400px) {
+        padding: 0;
+    }
 
     &.left {
         background-image: linear-gradient(to right, #00000070 80%, #00000000 100%);
@@ -191,6 +195,10 @@ const Slider__dots = styled.div`
     transform: translateX(-50%);
     display: flex;
     gap: 1rem;
+
+    @media only screen and (max-width: 400px) {
+        bottom: 5%;
+    }
 `;
 
 const Slider__dot = styled.div`

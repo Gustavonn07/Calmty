@@ -43,6 +43,11 @@ const Menu__container = styled.section`
     width: 80%;
     height: 100%;
     animation: open forwards .6s;
+    
+
+    @media only screen and (max-width: 400px) {
+        width: 100%;
+    }
 
     @keyframes open {
         0% {

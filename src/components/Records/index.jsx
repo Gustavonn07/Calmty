@@ -72,6 +72,10 @@ const Records__container = styled.section`
     @media only screen and (max-width: 800px) {
         gap: 6rem;
     }
+    
+    @media only screen and (max-width: 400px) {
+        gap: 2rem;
+    }
 `;
 
 const Records__texts = styled.div`
@@ -113,6 +117,11 @@ const Records__record = styled.div`
     @media only screen and (max-width: 800px) {
         width: 70%;
         height: 40rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        width: 95%;
+        height: 45rem;
     }
 
     &:hover {
@@ -157,6 +166,14 @@ const Records__heading__primary = styled.h2`
     
     @media only screen and (max-width: 1200px) {
         font-size: var(--font-heading-2);
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: var(--font-heading-3);
+    }
+
+    @media only screen and (max-width: 400px) {
+        font-size: var(--font-heading-4);
     }
 
     &:hover {
