@@ -242,8 +242,8 @@ const Modal__close = styled.button`
     cursor: pointer;
 
     @media only screen and (max-width: 600px) {
-        top: 15%;
-        right: 5%;
+        top: 12.5%;
+        right: 8%;
     }
 `;
 
