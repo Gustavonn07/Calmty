@@ -169,6 +169,13 @@ const Modal = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media only screen and (max-width: 600px) {
+        top: 0;
+        left: 0;
+        transform: translate(-21%, -90%);
+        width: 120vw;
+    }
 `;
 
 const Modal__container = styled.div`
@@ -181,6 +188,23 @@ const Modal__container = styled.div`
     border-radius: .8rem;
 
     animation: open forwards .3s;
+
+    @media only screen and (max-width: 1200px) {
+        width: 80%;
+    }
+
+    @media only screen and (max-width: 1200px) {
+        width: 90%;
+    }
+
+    @media only screen and (max-width: 1200px) {
+        width: 100%;
+    }
+    
+    @media only screen and (max-width: 600px) {
+        height: 100%;
+        flex-direction: column;
+    }
 
     @keyframes open {
         0% {
@@ -220,6 +244,10 @@ const Modal__close = styled.button`
 const Modal__image = styled.img`
     width: 50%;
     height: 100%;
+
+    @media only screen and (max-width: 600px) {
+        display: none;
+    }
 `;
 
 const Modal__content = styled.div`
@@ -229,6 +257,15 @@ const Modal__content = styled.div`
     padding: 5rem;
     gap: 4rem;
     flex-direction: column;
+    
+    @media only screen and (max-width: 1200px) {
+        gap: 1.5rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        width: 100%;
+        height: 50%;
+    }
 `;
 
 const Modal__heading = styled.h2`
@@ -236,6 +273,10 @@ const Modal__heading = styled.h2`
     font-size: 4.8rem;
     width: fit-content;
     position: relative;
+    
+    @media only screen and (max-width: 800px) {
+        font-size: 3.5rem;
+    }
 
     &::before {
             content: "";
@@ -320,6 +361,10 @@ const Modal__submit = styled.input`
 const Modal__text = styled.p`
     color: var(--color-primary-2);
     font-size: 1.6rem;
+    
+    @media only screen and (max-width: 800px) {
+        font-size: 1.3rem;
+    }
 `;
 
 const Modal__span = styled.span`
