@@ -1,4 +1,5 @@
 import Header from "../../components/Header";
+import Services from "../../components/Services";
 
 function PageAboutUs() {
 
@@ -12,6 +13,7 @@ function PageAboutUs() {
           btn={'Serviços'}
           link={'#servicos'}
         />
+        <Services />
     </>
   )
 }
