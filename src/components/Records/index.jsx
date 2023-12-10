@@ -166,15 +166,9 @@ const Records__heading__primary = styled.h2`
     
     @media only screen and (max-width: 1200px) {
         font-size: var(--font-heading-2);
+        text-align: center;
     }
 
-    @media only screen and (max-width: 600px) {
-        font-size: var(--font-heading-3);
-    }
-
-    @media only screen and (max-width: 400px) {
-        font-size: var(--font-heading-4);
-    }
 
     &:hover {
         transform: scale(1.02) skewY(1deg) translateX(-50%);
@@ -191,6 +185,10 @@ const Records__heading__primary = styled.h2`
         top: 90%;
         left: -2rem;
         transition: all .5s;
+        
+        @media only screen and (max-width: 600px) {
+            display: none;
+        }
     }
 
     &:hover::before {

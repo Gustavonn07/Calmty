@@ -1,3 +1,4 @@
+import AboutUs from "../../components/AboutUs";
 import Header from "../../components/Header";
 import Services from "../../components/Services";
 
@@ -10,9 +11,10 @@ function PageAboutUs() {
           imagem={'../../images/Equipe.jpg'}
           title={'Conheça nossos serviços'}
           text={'Trabalhando sempre com a melhor qualidade'}
-          btn={'Serviços'}
+          btn={'Ver serviços'}
           link={'#servicos'}
         />
+        <AboutUs />
         <Services />
     </>
   )

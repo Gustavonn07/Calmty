@@ -91,6 +91,10 @@ const Services__heading = styled.h2`
         top: 90%;
         left: -2rem;
         transition: all .5s;
+        
+        @media only screen and (max-width: 600px) {
+            display: none;
+        }
     }
 
     &:hover::before {
@@ -105,6 +109,7 @@ const Services__services = styled.section`
     padding: 2.5rem;
     gap: 2.5rem;
     padding-top: 5rem;
+    justify-items: center;
 
     @media only screen and (max-width: 1000px) { 
         grid-template-columns: repeat(2, 1fr);
@@ -119,7 +124,7 @@ const Services__services = styled.section`
 const Services__service = styled.ul`
     padding: 3rem;
     height: 40rem;
-    width: 100%;
+    width: 80%;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -127,6 +132,10 @@ const Services__service = styled.ul`
     border-radius: 1rem;
     box-shadow: 0 .6rem 1rem var(--shadow-40);
     transition: all .2s;
+
+    @media only screen and (max-width: 1400px) { 
+        width: 100%;
+    }
 
     @media only screen and (max-width: 300px) {
         height: 45rem;

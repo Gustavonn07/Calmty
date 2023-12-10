@@ -67,6 +67,10 @@ const Header__title = styled.h2`
         position: absolute;
         bottom: 0%;
         transition: all .5s;
+        
+        @media only screen and (max-width: 600px) {
+            display: none;
+        }
     }
 
     &:hover {

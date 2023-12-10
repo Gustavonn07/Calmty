@@ -87,14 +87,7 @@ const Depoimentos__heading__primary = styled.h2`
 
     @media only screen and (max-width: 1200px) {
         font-size: var(--font-heading-2);
-    }
-    
-    @media only screen and (max-width: 600px) {
-        font-size: var(--font-heading-3);
-    }
-    
-    @media only screen and (max-width: 400px) {
-        font-size: var(--font-heading-4);
+        text-align: center;
     }
 
     &:hover {
@@ -112,6 +105,10 @@ const Depoimentos__heading__primary = styled.h2`
         top: 90%;
         left: -2rem;
         transition: all .5s;
+
+        @media only screen and (max-width: 600px) {
+            display: none;
+        }
     }
 
     &:hover::before {
