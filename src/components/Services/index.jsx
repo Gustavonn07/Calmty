@@ -38,9 +38,11 @@ const Services = () => {
     return (
         <>
             <Services__container id="servicos">
-                <Services__heading>Serviços</Services__heading>
+                <div data-aos="fade-up" data-aos-duration="1200">
+                    <Services__heading>Serviços</Services__heading>
+                </div>
                 
-                <Services__services>
+                <Services__services data-aos="fade-right" data-aos-duration="1200">
                     {
                         services.map(service => (
                             <Services__service key={service.id}>
@@ -59,6 +61,10 @@ const Services = () => {
 const Services__container = styled.main`
     background-image: linear-gradient(to bottom, var(--color-primary-1) 20%, var(--color-primary-1));
     padding: 8rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `;
 
 const Services__heading = styled.h2`
@@ -67,8 +73,7 @@ const Services__heading = styled.h2`
     color: var(--color-primary-3);
     font-weight: 700;
     position: relative;
-    left: 50%;
-    transform: scale(1) skewY(0) translateX(-50%);
+    transform: scale(1) skewY(0);
     transition: all .2s;
     text-shadow: 0 .2rem .6rem var(--shadow-20);
 
@@ -77,7 +82,7 @@ const Services__heading = styled.h2`
     }
 
     &:hover {
-        transform: scale(1.02) skewY(1deg) translateX(-50%);
+        transform: scale(1.02) skewY(1deg);
         text-shadow: 0 .2rem .6rem var(--shadow-40);
     }
 
