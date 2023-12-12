@@ -32,9 +32,9 @@ const NavbarLinks = (props) => {
             <Navbar__li>
                 <Navbar__link href="/" className={urlCompleta == 'https://calmty.vercel.app/' && classe ? 'active' : ''}> Home </Navbar__link>
             </Navbar__li>
-            <Navbar__li>
+            {/* <Navbar__li>
                 <Navbar__link href="/product" className={urlCompleta == 'https://calmty.vercel.app/product' && classe ? 'active' : ''}> Produtos </Navbar__link>
-            </Navbar__li>
+            </Navbar__li> */}
             <Navbar__li>
                 <Navbar__link href="/about" className={urlCompleta == 'https://calmty.vercel.app/about' && classe ? 'active' : ''}> Sobre nós </Navbar__link>
             </Navbar__li>

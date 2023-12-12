@@ -15,9 +15,9 @@ function PageContact() {
           btn={'Entrar em contato'}
           link={'#contato'}
         />
+        <Sedes />
         <Contacts />
         <Social />
-        <Sedes />
     </>
   )
 }
