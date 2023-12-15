@@ -1,5 +1,4 @@
 import Contacts from "../../components/Contacts";
-import Social from "../../components/Social";
 import Header from "../../components/Header";
 import Sedes from "../../components/Sedes";
 
@@ -17,7 +16,6 @@ function PageContact() {
         />
         <Sedes />
         <Contacts />
-        <Social />
     </>
   )
 }

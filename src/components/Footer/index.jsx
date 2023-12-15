@@ -25,17 +25,20 @@ const Footer = () => {
                         </Footer__li>
                     </Footer__ul>
 
-                    <Footer__icons>
-                        <Footer__link href="#">
-                            <Footer__icon><FaFacebook/></Footer__icon>
-                        </Footer__link>
-                        <Footer__link href="#">
-                            <Footer__icon><FaInstagram/></Footer__icon>
-                        </Footer__link>
-                        <Footer__link href="#">
-                            <Footer__icon><FaSquareXTwitter/></Footer__icon>
-                        </Footer__link>
-                    </Footer__icons>
+                    <div>
+                        <Footer__paragraph>Redes sociais:</Footer__paragraph>
+                        <Footer__icons>
+                            <Footer__link href="#">
+                                <Footer__icon><FaFacebook/></Footer__icon>
+                            </Footer__link>
+                            <Footer__link href="#">
+                                <Footer__icon><FaInstagram/></Footer__icon>
+                            </Footer__link>
+                            <Footer__link href="#">
+                                <Footer__icon><FaSquareXTwitter/></Footer__icon>
+                            </Footer__link>
+                        </Footer__icons>
+                    </div>
             </Footer__container>
         </>
     )
@@ -51,6 +54,17 @@ const Footer__container = styled.footer`
     justify-content: center;
     align-items: center;
     position: relative;
+
+    & div:nth-child(3) {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        
+        
+        & p {
+            font-size: 1.8rem;
+        }
+    }
 `;
 
 const Footer__logo = styled.h2`
