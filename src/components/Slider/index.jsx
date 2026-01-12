@@ -15,45 +15,70 @@ const Slider = () => {
 
     return (
         <>
-            <Slider__container>
-                <Slider__slides $position={position}>
-                    <Slider__slide id="slide01">
+            <Slider__container data-cy="slider">
+                <Slider__slides
+                    $position={position}
+                    data-cy="slider-slides"
+                    data-active={position}
+                >
+                    <Slider__slide id="slide01" data-cy="slide-0">
                         <Slider__content className="left">
-                            <Slider__heading>Conheça nossa <br /> coleção <Slider__span className="mel">Chá de Mel</Slider__span></Slider__heading>
+                            <Slider__heading>
+                                Conheça nossa <br />
+                                coleção <Slider__span className="mel">Chá de Mel</Slider__span>
+                            </Slider__heading>
                             <Slider__paragraph>
-                                Imagine-se imerso em um mundo encantador onde a suavidade do mel encontra a sofisticação do chá, criando uma coleção única que desperta os sentidos e eleva a experiência sensorial a um novo nível.
+                                Imagine-se imerso em um mundo encantador onde a suavidade do mel encontra a sofisticação do chá.
                             </Slider__paragraph>
                         </Slider__content>
                     </Slider__slide>
 
-                    <Slider__slide id="slide02">
+                    <Slider__slide id="slide02" data-cy="slide-1">
                         <Slider__content className="right">
-                            <Slider__heading>Coleção EXCLUSIVA: <br /> <Slider__span className="limao">Manhã de limão</Slider__span></Slider__heading>
+                            <Slider__heading>
+                                Coleção EXCLUSIVA: <br />
+                                <Slider__span className="limao">Manhã de limão</Slider__span>
+                            </Slider__heading>
                             <Slider__paragraph>
-                                Embarque em uma jornada sensorial única, onde o frescor cítrico e vibrante do limão se encontra com a serenidade aromática do chá. 
+                                Embarque em uma jornada sensorial única, onde o frescor cítrico do limão se encontra com o chá.
                             </Slider__paragraph>
                         </Slider__content>
                     </Slider__slide>
 
-                    <Slider__slide id="slide03">
+                    <Slider__slide id="slide03" data-cy="slide-2">
                         <Slider__content className="left">
-                            <Slider__heading>Novo Conjunto: <br /> <Slider__span className="combinado">Paz e Serenidade</Slider__span></Slider__heading>
+                            <Slider__heading>
+                                Novo Conjunto: <br />
+                                <Slider__span className="combinado">Paz e Serenidade</Slider__span>
+                            </Slider__heading>
                             <Slider__paragraph>
-                                Delicie-se em um conjunto de xícaras meticulosamente elaborado para envolver seus momentos de pausa com serenidade. Cada xícara desta coleção é mais do que uma peça de cerâmica; é uma expressão tangível da tranquilidade.
+                                Um conjunto de xícaras elaborado para envolver seus momentos de pausa com serenidade.
                             </Slider__paragraph>
                         </Slider__content>
                     </Slider__slide>
                 </Slider__slides>
 
-                <Slider__dots>
-                    <Slider__dot className={position == 0 && 'active'} onClick={() => setPosition(0)}></Slider__dot>
-                    <Slider__dot className={position == 1 && 'active'} onClick={() => setPosition(1)}></Slider__dot>
-                    <Slider__dot className={position == 2 && 'active'} onClick={() => setPosition(2)}></Slider__dot>
+                <Slider__dots data-cy="slider-dots">
+                    <Slider__dot
+                        data-cy="dot-0"
+                        className={position === 0 ? 'active' : ''}
+                        onClick={() => setPosition(0)}
+                    />
+                    <Slider__dot
+                        data-cy="dot-1"
+                        className={position === 1 ? 'active' : ''}
+                        onClick={() => setPosition(1)}
+                    />
+                    <Slider__dot
+                        data-cy="dot-2"
+                        className={position === 2 ? 'active' : ''}
+                        onClick={() => setPosition(2)}
+                    />
                 </Slider__dots>
             </Slider__container>
         </>
-    )
-}
+    );
+};
 
 const Slider__container = styled.section`
     width: 100%;
