@@ -32,7 +32,7 @@ const Navbar = () => {
 
     return (
         <>
-            <Navbar__container id="container">
+            <Navbar__container id="container" data-cy="navbar">
                 <Navbar__LOGO className="logo">Calmty</Navbar__LOGO>
                 {
                     !hamburguer ? (          
